@@ -12,6 +12,26 @@
   5. [CONFIRMED CORRECT] Location: "Newcastle upon Tyne, UK" confirmed correct by Callum.
      cv.md still says "Harpenden, St Albans, UK" — that master file is stale and should
      be updated separately in the career-ops project, not here.
+
+  Round 2 — from external Copilot review (2026-08-06):
+  Implemented (grounded in existing real facts, no new numbers invented):
+  - Restructured Fighting Fear + Beijing Boya case-study items into Situation/Action/
+    Outcome format instead of flat achievement bullets.
+  - Added "What Sets Her Apart" section (bilingual, cross-cultural, remote leadership,
+    volunteer development) surfacing differentiators that were previously buried in prose.
+  - Expanded Beijing Boya to match Fighting Fear's depth; merged content-creation +
+    localisation into one item and added a qualitative "EN <-> Chinese" tile, since
+    Copilot flagged this section as underweighted despite being her strongest
+    differentiator (bilingual, cross-cultural work).
+  - Added a short honest line under Experience addressing the "what has she been doing
+    since March 2025" gap (Starbucks, deliberate part-time while job-hunting).
+  Deliberately NOT done — would require fabricating data not in any real source:
+  - Platform-specific breakdown (which of Instagram/Facebook/TikTok/LinkedIn per role).
+  - Audience size before/after (raw follower counts, not just %).
+  - Newsletter count / typical engagement rates.
+  - A real "How I Work" methodology section — needs Gloria's actual process, not an
+    inferred one dressed up as insight.
+  See questions-for-gloria list Callum has separately, to fill these in for real.
 -->
 <html lang="en">
 <head>
@@ -241,6 +261,38 @@
     padding-left: 12px;
     max-width: 520px;
   }
+  .sao-label {
+    display: inline-block;
+    min-width: 70px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--coral);
+  }
+
+  .exp-note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--text-soft);
+    font-style: italic;
+    max-width: 620px;
+  }
+
+  .diff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 28px;
+  }
+  .diff-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px 22px;
+  }
+  .diff-card .diff-title { font-weight: 700; color: var(--ink); font-size: 15px; }
+  .diff-card .diff-body { margin-top: 8px; font-size: 13px; color: var(--text-soft); }
 
   .work-sample {
     margin-top: 14px;
@@ -340,6 +392,7 @@
 <nav class="site-nav">
   <div class="wrap">
     <a href="#about">About</a>
+    <a href="#differentiators">Strengths</a>
     <a href="#experience">Experience</a>
     <a href="#fighting-fear">Fighting Fear</a>
     <a href="#beijing-boya">Beijing Boya Tianxia</a>
@@ -373,6 +426,30 @@
   </div>
 </section>
 
+<section class="divider" id="differentiators">
+  <div class="wrap">
+    <div class="eyebrow">What Sets Her Apart</div>
+    <div class="diff-grid">
+      <div class="diff-card">
+        <div class="diff-title">Bilingual, English &amp; Chinese</div>
+        <div class="diff-body">Fluent in both, and has worked professionally in both &mdash; from creating content to translating and localising campaigns for client accounts.</div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-title">Cross-cultural marketing</div>
+        <div class="diff-body">Built her career across two markets &mdash; a Beijing media agency and a UK community organisation &mdash; learning first-hand how the same message needs to land differently for different audiences.</div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-title">Remote team leadership</div>
+        <div class="diff-body">Built and led a working structure for a team distributed across the UK, Thailand and the Netherlands, keeping output consistent in English as a shared second language.</div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-title">Volunteer &amp; junior staff development</div>
+        <div class="diff-body">Recruited, trained and managed volunteers and junior staff to run day-to-day social operations at Fighting Fear.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="divider" id="experience">
   <div class="wrap">
     <div class="eyebrow">Experience</div>
@@ -388,6 +465,7 @@
         <div class="dates">Aug 2017 &ndash; Nov 2018</div>
       </div>
     </div>
+    <p class="exp-note">Since March 2025, Gloria has been working part-time in hospitality while she focuses on landing her next marketing or social media role &mdash; a deliberate choice to keep working, not a step away from marketing.</p>
   </div>
 </section>
 
@@ -415,15 +493,18 @@
         <div class="num">01</div>
         <div>
           <h3>Content calendar &amp; day-to-day social</h3>
-          <p>Owned the organisation's content calendar and posting schedule end-to-end across all platforms, and led market analysis with a cross-functional team of 15+, driving 21% growth in social media followers.</p>
-          <p class="role-note">Gloria's role: as the organisation's Social Media &amp; Marketing Manager, she owned day-to-day execution and reporting, and recruited, trained and managed the volunteers and junior staff who ran social operations. The 15+ figure reflects the wider cross-functional group &mdash; including those volunteers and other departments &mdash; she coordinated with specifically on this market analysis.</p>
+          <p><span class="sao-label">Situation</span> Fighting Fear is a fully remote, volunteer-supported community organisation running its own social channels, content and events.</p>
+          <p><span class="sao-label">Action</span> Gloria owned the content calendar and posting schedule end-to-end, recruited and trained the volunteers and junior staff who ran day-to-day social operations, and led a market analysis exercise with a wider cross-functional group of 15+.</p>
+          <p><span class="sao-label">Outcome</span> 21% growth in social media followers and stronger audience engagement.</p>
+          <p class="role-note">Gloria's role: as the organisation's Social Media &amp; Marketing Manager, she owned day-to-day execution and reporting. The 15+ figure reflects the wider cross-functional group &mdash; including those volunteers and other departments &mdash; she coordinated with specifically on this market analysis.</p>
         </div>
       </div>
       <div class="case-item">
         <div class="num">02</div>
         <div>
           <h3>Monthly newsletter</h3>
-          <p>Wrote and designed the organisation's monthly community newsletter &mdash; board updates, member resources, and upcoming events &mdash; sent to the Fighting Fear community and shared across social channels.</p>
+          <p><span class="sao-label">Situation</span> The community relied on a regular newsletter to stay updated on board news, member resources and upcoming events.</p>
+          <p><span class="sao-label">Action</span> Gloria wrote and designed the newsletter end-to-end, sent to the Fighting Fear community and shared across social channels.</p>
           <div class="work-sample">
             <img src="images/newsletter-header.jpg" alt="Masthead of the Fighting Fear March newsletter designed by Gloria" loading="lazy">
             <div class="work-sample-caption">Masthead from the March newsletter Gloria wrote and designed end-to-end.</div>
@@ -434,7 +515,9 @@
         <div class="num">03</div>
         <div>
           <h3>Event &amp; fundraiser promotion</h3>
-          <p>Marketed and promoted in-person fundraiser events, including the Kiki Kitschn Drag Brunch, identifying and engaging potential attendees on social media and contributing to an 18% increase in ticket sales.</p>
+          <p><span class="sao-label">Situation</span> Fighting Fear ran in-person fundraiser events, including the Kiki Kitschn Drag Brunch, that depended on social promotion to drive attendance.</p>
+          <p><span class="sao-label">Action</span> Gloria identified and engaged potential attendees on social media to market and promote the event.</p>
+          <p><span class="sao-label">Outcome</span> 18% increase in ticket sales.</p>
         </div>
       </div>
     </div>
@@ -464,7 +547,7 @@
     <div class="case-header">
       <div class="eyebrow">Case Study</div>
       <h2 style="margin-top: 10px;">Beijing Boya Tianxia</h2>
-      <p class="case-sub">A media and marketing agency in Beijing. Gloria worked directly on client accounts, translating strategy and content between Chinese and English audiences.</p>
+      <p class="case-sub">A media and marketing agency in Beijing. Gloria worked directly on client accounts, creating and localising content across Chinese and English &mdash; one of the clearest examples of the bilingual, cross-cultural marketing that sets her apart.</p>
     </div>
 
     <div class="stat-row">
@@ -480,6 +563,10 @@
         <div class="stat-num">+24%</div>
         <div class="stat-label">boost in audience engagement</div>
       </div>
+      <div class="stat-tile">
+        <div class="stat-num" style="font-size: 20px;">EN &#8646; &#20013;&#25991;</div>
+        <div class="stat-label">bilingual campaign delivery</div>
+      </div>
     </div>
 
     <div class="case-list">
@@ -487,21 +574,26 @@
         <div class="num">01</div>
         <div>
           <h3>Analytics-led campaign optimisation</h3>
-          <p>Monitored social media analytics to gather insights for optimising campaign performance and shaping future marketing strategy, resulting in a 23% increase in ROI.</p>
+          <p><span class="sao-label">Situation</span> Client campaigns needed ongoing performance monitoring to guide strategy and prove value.</p>
+          <p><span class="sao-label">Action</span> Gloria monitored social media analytics to gather insights and shape future marketing strategy.</p>
+          <p><span class="sao-label">Outcome</span> 23% increase in ROI.</p>
         </div>
       </div>
       <div class="case-item">
         <div class="num">02</div>
         <div>
-          <h3>Content creation</h3>
-          <p>Created content that achieved a 16% increase in social media followers and a 24% boost in engagement across client accounts.</p>
+          <h3>Bilingual content creation &amp; localisation</h3>
+          <p><span class="sao-label">Situation</span> Campaigns needed to land with both Chinese and English-speaking audiences without losing meaning or tone.</p>
+          <p><span class="sao-label">Action</span> Gloria created content for client accounts and translated and localised marketing materials between Chinese and English.</p>
+          <p><span class="sao-label">Outcome</span> 16% follower growth and a 24% boost in engagement.</p>
         </div>
       </div>
       <div class="case-item">
         <div class="num">03</div>
         <div>
-          <h3>Client management &amp; localisation</h3>
-          <p>Worked directly with external client accounts, managing relationships and expectations across roughly 5 concurrent campaigns, and translated and localised marketing content between Chinese and English.</p>
+          <h3>Client relationship management</h3>
+          <p><span class="sao-label">Situation</span> The agency ran multiple concurrent client accounts, each with its own expectations and deliverables.</p>
+          <p><span class="sao-label">Action</span> Gloria worked directly with external client accounts, managing relationships and expectations across roughly 5 concurrent campaigns.</p>
         </div>
       </div>
     </div>
