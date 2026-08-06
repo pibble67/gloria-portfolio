@@ -1,19 +1,17 @@
 <!doctype html>
 <!--
   TODO — open items needing Callum or Gloria (not fixable without more real info):
-  1. Headshot: no photo of Gloria available in accessible files. Add one and drop it in
-     as a real <img> in the hero section once supplied.
+  1. [DONE] Headshot: added to hero section, sourced from
+     "1. GET MY BBY A JOB/Template/Profile.jpg" — resized to images/headshot.jpg.
   2. [DONE] LinkedIn: added to hero + footer contact-row — https://www.linkedin.com/in/gloria-guanne/
   3. Testimonial: none available — do not fabricate. Add a pull-quote-style testimonial
      block (reuse .work-sample or blockquote.pull styling) if a real quote from a
      colleague (e.g. Fighting Fear) is ever supplied.
-  4. Newsletter photo: only the masthead (no people) is used in the Fighting Fear case
-     study, since the full newsletter page features named third parties (board members,
-     a guest practitioner) whose consent we don't have to feature on Gloria's personal
-     portfolio. Revisit only if/when their consent is confirmed.
-  5. Location discrepancy: this page says "Newcastle upon Tyne, UK" (hero + footer) but
-     cv.md (the master CV source) says "Harpenden, St Albans, UK". Needs Gloria to
-     confirm current location before either is trusted as correct.
+  4. [CONFIRMED CORRECT] Newsletter photo: masthead-only call confirmed correct by Callum
+     — no change needed.
+  5. [CONFIRMED CORRECT] Location: "Newcastle upon Tyne, UK" confirmed correct by Callum.
+     cv.md still says "Harpenden, St Albans, UK" — that master file is stale and should
+     be updated separately in the career-ops project, not here.
 -->
 <html lang="en">
 <head>
@@ -119,6 +117,24 @@
   header.hero {
     padding: 72px 0 72px;
     border-bottom: 1px solid var(--border);
+  }
+  .hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    flex-wrap: wrap-reverse;
+  }
+  .hero-text { flex: 1 1 420px; }
+  .hero-photo { flex: 0 0 auto; }
+  .hero-photo img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 4px solid var(--card);
+    box-shadow: 0 0 0 1px var(--border);
   }
   header.hero h1 {
     font-size: clamp(40px, 7vw, 64px);
@@ -333,14 +349,19 @@
 </nav>
 
 <header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Marketing &amp; Social Media Portfolio</div>
-    <h1>Gloria Guan</h1>
-    <p class="tagline">Bilingual marketing and social media professional building community-first content and campaigns across the UK and China.</p>
-    <div class="contact-row">
-      <a href="mailto:gloriaguan1996@gmail.com">gloriaguan1996@gmail.com</a>
-      <a href="https://www.linkedin.com/in/gloria-guanne/" target="_blank" rel="noopener">LinkedIn</a>
-      <span style="color: var(--text-soft);">Newcastle upon Tyne, UK</span>
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <div class="eyebrow">Marketing &amp; Social Media Portfolio</div>
+      <h1>Gloria Guan</h1>
+      <p class="tagline">Bilingual marketing and social media professional building community-first content and campaigns across the UK and China.</p>
+      <div class="contact-row">
+        <a href="mailto:gloriaguan1996@gmail.com">gloriaguan1996@gmail.com</a>
+        <a href="https://www.linkedin.com/in/gloria-guanne/" target="_blank" rel="noopener">LinkedIn</a>
+        <span style="color: var(--text-soft);">Newcastle upon Tyne, UK</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="images/headshot.jpg" alt="Portrait of Gloria Guan" width="160" height="160">
     </div>
   </div>
 </header>
