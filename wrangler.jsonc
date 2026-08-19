@@ -1,0 +1,8 @@
+{
+  "name": "gloria-portfolio",
+  "compatibility_date": "2025-08-07",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page"
+  }
+}
