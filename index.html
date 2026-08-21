@@ -140,6 +140,24 @@
     went standalone (see "Portfolio website" section of the handoff doc, written
     before the Cloudflare migration). Callum agreed: skip the artifact, keep editing
     this repo only.
+
+  Round 9 (2026-08-21): Full site review (visual, technical, accessibility) against
+  the live gloriaguan.com render, not just source. Fixed the two low-risk items
+  Callum approved:
+  - The newsletter masthead image has a bright yellow/white background baked into
+    the photo itself, which looked jarring/broken against the dark-mode card. Added
+    a fixed light "mat" (#FAF6F1) wrapping just the image, so it reads as a framed
+    physical artifact regardless of site theme, instead of a theme mismatch. Caption
+    strip below it stays themed as before.
+  - Added a standard skip-to-content link (visually hidden until focused) targeting
+    a new id="main-content" on the hero header, for keyboard/screen-reader users.
+  Reviewed but deliberately left alone (Callum's call, not urgent):
+  - Beijing Boya case-item 03 (Client relationship management) is the only S/A/O
+    item with no Outcome line - no quantified outcome exists in cv.md or the
+    handoff doc for that bullet, so nothing to add without inventing one.
+  - No CV/resume download link - would need a real, public-approved PDF first.
+  - No JSON-LD structured data - legitimate low-effort SEO enhancement, skipped for
+    now, fine to revisit later.
 -->
 <html lang="en">
 <head>
@@ -203,6 +221,21 @@
     -webkit-font-smoothing: antialiased;
   }
   .wrap { max-width: 920px; margin: 0 auto; padding: 0 28px; }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--coral);
+    color: #fff;
+    padding: 10px 16px;
+    z-index: 100;
+    border-radius: 0 0 4px 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .skip-link:focus { left: 0; }
 
   .site-nav {
     position: sticky;
@@ -410,7 +443,8 @@
     overflow: hidden;
     background: var(--card);
   }
-  .work-sample img { display: block; width: 100%; height: auto; }
+  .work-sample .mat { background: #FAF6F1; padding: 14px; }
+  .work-sample img { display: block; width: 100%; height: auto; border-radius: 2px; }
   .work-sample-caption {
     font-size: 12px;
     color: var(--text-soft);
@@ -497,6 +531,7 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <nav class="site-nav">
   <div class="wrap">
     <a href="#about">About</a>
@@ -509,7 +544,7 @@
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero" id="main-content">
   <div class="wrap hero-inner">
     <div class="hero-text">
       <div class="eyebrow">Marketing &amp; Social Media Portfolio</div>
@@ -614,7 +649,9 @@
           <p><span class="sao-label">Situation</span> The community relied on a regular newsletter to stay updated on board news, member resources and upcoming events.</p>
           <p><span class="sao-label">Action</span> Gloria wrote and designed the newsletter end-to-end, sent to the Fighting Fear community and shared across social channels.</p>
           <div class="work-sample">
-            <img src="images/newsletter-header.jpg" alt="Masthead of the Fighting Fear March newsletter designed by Gloria" loading="lazy">
+            <div class="mat">
+              <img src="images/newsletter-header.jpg" alt="Masthead of the Fighting Fear March newsletter designed by Gloria" loading="lazy">
+            </div>
             <div class="work-sample-caption">Masthead from the March newsletter Gloria wrote and designed end-to-end.</div>
           </div>
         </div>
